@@ -79,7 +79,7 @@
 {% endblock %}
 <script>
     {% block domready %}
-        var options = {
+        const options = {
             method: 'POST',
             mode: 'same-origin'
         };
@@ -88,7 +88,7 @@
             forcePlaceholderSize: true,
             placeholderClass: 'placeholder'
         })[0].addEventListener('sortupdate', function (e) {
-            modulesOrder = {};
+            const modulesOrder = {};
             const modules = document.querySelectorAll('#modules li');
             modules.forEach(function (module, index) {
                 modulesOrder[module.dataset.id] = index;
@@ -103,7 +103,7 @@
             forcePlaceholderSize: true,
             placeholderClass: 'placeholder'
         })[0].addEventListener('sortupdate', function (e) {
-            contentOrder = {};
+            const contentOrder = {};
             const contents = document.querySelectorAll('#module-contents div');
             contents.forEach(function (content, index) {
                 contentOrder[content.dataset.id] = index;
