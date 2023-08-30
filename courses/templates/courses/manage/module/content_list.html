@@ -81,6 +81,9 @@
     {% block domready %}
         const options = {
             method: 'POST',
+            headers: {
+                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+            },
             mode: 'same-origin'
         };
         const moduleOrderUrl = '{% url "module_order" %}';
